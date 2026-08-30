@@ -1,12 +1,3039 @@
 :root{--blue:#8fd8ff;--white:#fff;--gray:#71808d;--glass:rgba(255,255,255,.20);--line:rgba(255,255,255,.45);--shadow:0 24px 70px rgba(40,130,175,.18);--radius:30px}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;color:var(--white);overflow-x:hidden;background:#8fdcff}
-body:before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:linear-gradient(to bottom,rgba(139,218,255,.18),rgba(214,246,255,.05) 43%,rgba(9,132,190,.10) 50%,rgba(0,78,125,.34)),url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=90") center/cover no-repeat}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{font-family:"DM Sans",sans-serif;color:var(--white);overflow-x:hidden;background:#8fdcff}
+
+body:before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:linear-gradient(to bottom,rgba(139,218,255,.18),rgba(214,246,255,.05) 43%,rgba(9,132,190,.10) 50%,rgba(0,78,125,.34)),url("background.png") center/cover no-repeat}
+
 body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(to bottom,rgba(255,255,255,.16),transparent 32%,transparent 46%,rgba(0,65,105,.10) 55%,rgba(0,52,92,.20))}
-.sky-decoration{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}.sky-cloud{position:absolute;width:170px;height:42px;border-radius:100px;background:rgba(255,255,255,.68);filter:blur(1px);opacity:.68}.sky-cloud:before,.sky-cloud:after{content:"";position:absolute;background:inherit;border-radius:50%}.sky-cloud:before{width:68px;height:68px;left:30px;bottom:8px}.sky-cloud:after{width:84px;height:84px;right:25px;bottom:3px}.sky-cloud.c1{top:13%;left:4%;transform:scale(.72)}.sky-cloud.c2{top:21%;right:7%;transform:scale(.82)}.sky-cloud.c3{top:35%;left:17%;transform:scale(.42);opacity:.38}
-.sky-bird{position:absolute;width:34px;height:18px}.sky-bird:before,.sky-bird:after{content:"";position:absolute;top:7px;width:18px;height:8px;border-top:3px solid rgba(42,64,75,.72);border-radius:70% 70% 0 0}.sky-bird:before{right:15px;transform:rotate(14deg)}.sky-bird:after{left:15px;transform:rotate(-14deg)}.sky-bird.b1{top:17%;left:20%}.sky-bird.b2{top:25%;right:19%;transform:scale(.7)}.sky-bird.b3{top:33%;right:8%;transform:scale(.5)}
-a{text-decoration:none;color:inherit}.container{width:min(1160px,90%);margin:auto}.nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1160px,92%);z-index:20;padding:13px 16px 13px 22px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.17);backdrop-filter:blur(22px);box-shadow:0 12px 35px rgba(42,130,175,.12);display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Space Grotesk";font-weight:700;font-size:1.2rem;-webkit-text-stroke:1px #77838c}.navlinks{display:flex;gap:6px;align-items:center}.navlinks a{padding:10px 14px;border-radius:14px;font-size:.9rem;font-weight:600}.navlinks a:hover{background:rgba(255,255,255,.22)}.menu{display:none;border:0;background:rgba(255,255,255,.2);color:white;border-radius:12px;padding:10px 12px;font-size:1.1rem}
-.hero{min-height:100vh;display:grid;place-items:center;padding:150px 0 80px;position:relative}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.15);font-size:.82rem;font-weight:700}.dot{width:8px;height:8px;border-radius:50%;background:white;box-shadow:0 0 14px white}.micro{margin-top:14px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.75}h1,h2,h3{font-family:"Space Grotesk",sans-serif}.hero h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.96;margin:22px 0;-webkit-text-stroke:1.7px #74818b;letter-spacing:-.055em}.hero-copy{font-size:1.16rem;line-height:1.85;max-width:650px;text-shadow:0 2px 10px rgba(20,65,90,.55)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:16px;font-weight:700;border:1px solid rgba(255,255,255,.65);transition:.25s}.btn:hover{transform:translateY(-3px)}.btn-light{background:white;color:#3ba4dc}.btn-ghost{background:rgba(255,255,255,.12);color:white}.hero-art{min-height:500px;position:relative;display:grid;place-items:center}.horizon-waves{position:absolute;left:-5vw;right:-5vw;bottom:8%;height:110px;opacity:.28}.horizon-waves:before,.horizon-waves:after{content:"";position:absolute;left:0;right:0;height:55px;border-top:2px solid rgba(255,255,255,.75);border-radius:50%}.horizon-waves:before{top:8px;transform:scaleX(1.15)}.horizon-waves:after{top:30px;transform:scaleX(.95)}.orb{width:min(430px,75vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,rgba(255,255,255,.25),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.65);box-shadow:inset 0 0 70px rgba(255,255,255,.18),0 35px 90px rgba(30,130,175,.18);backdrop-filter:blur(10px)}.hero-card{position:absolute;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(18px);border-radius:22px;padding:18px 20px;box-shadow:var(--shadow)}.card-a{top:9%;right:0}.card-b{bottom:10%;left:0}.hero-card small{display:block;opacity:.8;margin-bottom:5px}
-section{padding:105px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}.kicker{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.8}.section-head h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1;-webkit-text-stroke:1px #7c8790;margin-top:10px}.section-head p{max-width:500px;line-height:1.7}.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.about-panel,.project,.contact-panel{background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.55);border-radius:var(--radius);backdrop-filter:blur(18px);box-shadow:var(--shadow)}.about-panel{padding:34px}.about-panel h3{font-size:2rem;margin-bottom:14px}.about-panel p,.project p,.contact-panel p{line-height:1.9}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.stat{padding:18px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35)}.stat strong{font-family:"Space Grotesk";font-size:1.7rem;display:block}.stat span{font-size:.78rem;opacity:.8}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.project{padding:28px;min-height:330px;position:relative;overflow:hidden;transition:.3s}.project:hover{transform:translateY(-7px)}.project:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-70px;background:rgba(255,255,255,.14)}.project-tag{display:inline-block;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.16);font-size:.72rem;font-weight:800}.project h3{font-size:2rem;margin:75px 0 10px;-webkit-text-stroke:.7px #7c8790}.project a{display:inline-block;margin-top:22px;font-weight:800}.project.wide{grid-column:span 2;min-height:250px}
-.portfolio-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-template-rows:210px 210px;gap:15px}.portfolio-item{border-radius:24px;border:1px solid rgba(255,255,255,.5);background:linear-gradient(145deg,rgba(255,255,255,.27),rgba(255,255,255,.08));display:flex;align-items:end;padding:22px;box-shadow:var(--shadow);overflow:hidden;position:relative}.portfolio-item:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(33,80,105,.18))}.portfolio-item span{position:relative;z-index:1;font-weight:800;font-size:1.1rem}.portfolio-item.big{grid-row:span 2}.vision{padding:48px;border-radius:var(--radius);background:rgba(255,255,255,.23);border:1px solid rgba(255,255,255,.55);text-align:center;box-shadow:var(--shadow)}.vision h2{font-size:clamp(2.2rem,5vw,4.5rem);-webkit-text-stroke:1px #7c8790;line-height:1;margin-bottom:20px}.vision p{max-width:720px;margin:auto;line-height:1.9}.contact{display:grid;grid-template-columns:1fr .8fr;gap:22px}.contact-panel{padding:34px}.contact-panel h2{font-size:2.5rem;-webkit-text-stroke:1px #7c8790;margin-bottom:15px}.contact-links{display:grid;gap:10px;margin-top:25px}.contact-links a{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.35);font-weight:700}.qr-placeholder{min-height:250px;display:grid;place-items:center;text-align:center;border:1px dashed rgba(255,255,255,.7);border-radius:22px;padding:20px}footer{padding:35px 0 45px;border-top:1px solid rgba(255,255,255,.28);font-size:.85rem;opacity:.85}.footer-inner{display:flex;justify-content:space-between;gap:20px}.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
-@media(max-width:850px){.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:10px;background:rgba(120,200,245,.92);border:1px solid rgba(255,255,255,.4);border-radius:20px;flex-direction:column}.navlinks.open{display:flex}.navlinks a{width:100%;text-align:center}.menu{display:block}.hero-grid,.about,.contact{grid-template-columns:1fr}.hero-art{min-height:360px}.section-head{display:block}.section-head p{margin-top:18px}.projects{grid-template-columns:1fr}.project.wide{grid-column:span 1}.portfolio-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.portfolio-item.big{grid-row:span 1;grid-column:span 2}}
-@media(max-width:560px){.container{width:92%}.nav{width:94%}.hero{padding-top:130px}.hero h1{font-size:3.15rem}.hero-art{min-height:300px}.hero-card{font-size:.82rem}.card-a{right:-5px}.card-b{left:-5px}section{padding:75px 0}.stats{grid-template-columns:1fr}.portfolio-grid{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,150px)}.portfolio-item.big{grid-column:span 1}.footer-inner{display:block}.footer-inner p:last-child{margin-top:8px}}
+
+.sky-decoration{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+
+.sky-cloud{position:absolute;width:170px;height:42px;border-radius:100px;background:rgba(255,255,255,.68);filter:blur(1px);opacity:.68}
+
+.sky-cloud:before,.sky-cloud:after{content:"";position:absolute;background:inherit;border-radius:50%}
+
+.sky-cloud:before{width:68px;height:68px;left:30px;bottom:8px}
+
+.sky-cloud:after{width:84px;height:84px;right:25px;bottom:3px}
+
+.sky-cloud.c1{top:13%;left:4%;transform:scale(.72)}
+
+.sky-cloud.c2{top:21%;right:7%;transform:scale(.82)}
+
+.sky-cloud.c3{top:35%;left:17%;transform:scale(.42);opacity:.38}
+
+.sky-bird{position:absolute;width:34px;height:18px}
+
+.sky-bird:before,.sky-bird:after{content:"";position:absolute;top:7px;width:18px;height:8px;border-top:3px solid rgba(42,64,75,.72);border-radius:70% 70% 0 0}
+
+.sky-bird:before{right:15px;transform:rotate(14deg)}
+
+.sky-bird:after{left:15px;transform:rotate(-14deg)}
+
+.sky-bird.b1{top:17%;left:20%}
+
+.sky-bird.b2{top:25%;right:19%;transform:scale(.7)}
+
+.sky-bird.b3{top:33%;right:8%;transform:scale(.5)}
+
+a{text-decoration:none;color:inherit}
+
+.container{width:min(1160px,90%);margin:auto}
+
+.nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1160px,92%);z-index:20;padding:13px 16px 13px 22px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.17);backdrop-filter:blur(22px);box-shadow:0 12px 35px rgba(42,130,175,.12);display:flex;align-items:center;justify-content:space-between}
+
+.brand{font-family:"Space Grotesk";font-weight:700;font-size:1.2rem;-webkit-text-stroke:1px #77838c}
+
+.navlinks{display:flex;gap:2px;align-items:center}
+
+.navlinks a{padding:10px 8px;border-radius:6px;font-size:.9rem;font-weight:600}
+
+.navlinks a:hover{background:rgba(255,255,255,.22)}
+
+.menu{display:none;border:0;background:rgba(255,255,255,.2);color:white;border-radius:12px;padding:10px 12px;font-size:1.1rem}
+
+.hero{min-height:auto;display:grid;place-items:center;padding: 75px 0 35px;position:relative}
+
+.hero-grid{display:grid;grid-template-columns:1fr .95fr;gap:0px;align-items:center}
+
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.15);font-size:.82rem;font-weight:700}
+
+.dot{width:8px;height:8px;border-radius:50%;background:white;box-shadow:0 0 14px white}
+
+.micro{margin-top:14px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.75}
+
+h1,h2,h3{font-family:"Space Grotesk",sans-serif}
+
+.hero h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.96;margin:22px 0;-webkit-text-stroke:1.7px #74818b;letter-spacing:-.055em}
+
+.hero-copy{font-size:1.16rem;line-height:1.85;max: width 900px;text-shadow:0 2px 10px rgba(20,65,90,.55)}
+
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:16px;font-weight:700;border:1px solid rgba(255,255,255,.65);transition:.25s}
+
+.btn:hover{transform:translateY(-3px)}
+
+.btn-light{background:white;color:#3ba4dc}
+
+.btn-ghost{background:rgba(255,255,255,.12);color:white}
+
+.hero-art{min-height:0;position:relative;display:none;place-items:center}
+
+.horizon-waves{position:absolute;left:-5vw;right:-5vw;bottom:8%;height:110px;opacity:.28}
+
+.horizon-waves:before,.horizon-waves:after{content:"";position:absolute;left:0;right:0;height:55px;border-top:2px solid rgba(255,255,255,.75);border-radius:50%}
+
+.horizon-waves:before{top:8px;transform:scaleX(1.15)}
+
+.horizon-waves:after{top:30px;transform:scaleX(.95)}
+
+.orb{display:none}
+
+.hero-card{display:none}
+
+.card-a{top:9%;right:0}
+
+.card-b{bottom:10%;left:0}
+
+.hero-card small{display:block;opacity:.8;margin-bottom:5px}
+
+section{padding:0 0 35px}
+
+#about{padding-top:0;margin-top:0}
+
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+
+.kicker{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+
+.section-head h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1;-webkit-text-stroke:1px #7c8790;margin-top:10px}
+
+.section-head p{max-width:500px;line-height:1.7}
+
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
+
+.about-panel,.project,.contact-panel{background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.55);border-radius:var(--radius);backdrop-filter:blur(18px);box-shadow:var(--shadow)}
+
+.about-panel{padding:34px}
+
+.about-panel h3{font-size:2rem;margin-bottom:14px}
+
+.about-panel p,.project p,.contact-panel p{line-height:1.9}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+
+.stat{padding:18px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35)}
+
+.stat strong{font-family:"Space Grotesk";font-size:1.7rem;display:block}
+
+.stat span{font-size:.78rem;opacity:.8}
+
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+
+.project{padding:28px;min-height:330px;position:relative;overflow:hidden;transition:.3s}
+
+.project:hover{transform:translateY(-7px)}
+
+.project:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-70px;background:rgba(255,255,255,.14)}
+
+.project-tag{display:inline-block;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.16);font-size:.72rem;font-weight:800}
+
+.project h3{font-size:2rem;margin:0px 0 10px;-webkit-text-stroke:.7px #7c8790}
+
+.project a{display:inline-block;margin-top:22px;font-weight:800}
+
+.project.wide{grid-column:span 2;min-height:250px}
+
+.portfolio-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-template-rows:210px 210px;gap:15px}
+
+.portfolio-item{border-radius:24px;border:1px solid rgba(255,255,255,.5);background:linear-gradient(145deg,rgba(255,255,255,.27),rgba(255,255,255,.08));display:flex;align-items:end;padding:22px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+
+.portfolio-item:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(33,80,105,.18))}
+
+.portfolio-item span{position:relative;z-index:1;font-weight:800;font-size:1.1rem}
+
+.portfolio-item.big{grid-row:span 2}
+
+.vision{padding:48px;border-radius:var(--radius);background:rgba(255,255,255,.23);border:1px solid rgba(255,255,255,.55);text-align:center;box-shadow:var(--shadow)}
+
+.vision h2{font-size:clamp(2.2rem,5vw,4.5rem);-webkit-text-stroke:1px #7c8790;line-height:1;margin-bottom:20px}
+
+.vision p{max-width:720px;margin:auto;line-height:1.9}
+
+.contact{display:grid;grid-template-columns:1fr .8fr;gap:22px}
+
+.contact-panel{padding:34px}
+
+.contact-panel h2{font-size:2.5rem;-webkit-text-stroke:1px #7c8790;margin-bottom:15px}
+
+.contact-links{display:grid;gap:10px;margin-top:25px}
+
+.contact-links a{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.35);font-weight:700}
+
+.qr-placeholder{min-height:250px;display:grid;place-items:center;text-align:center;border:1px dashed rgba(255,255,255,.7);border-radius:22px;padding:20px}
+
+footer{padding:35px 0 45px;border-top:1px solid rgba(255,255,255,.28);font-size:.85rem;opacity:.85}
+
+ .footer-inner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  text-align:center;
+}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:850px){
+.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:10px;background:rgba(120,200,245,.92);border:1px solid rgba(255,255,255,.4);border-radius:20px;flex-direction:column}
+
+.navlinks.open{display:flex}
+
+.navlinks a{width:100%;text-align:center}
+
+.menu{display:block}
+
+.hero-grid,.about,.contact{grid-template-columns:1fr}
+
+.hero-art{min-height:0}
+
+.section-head{display:block}
+
+.section-head p{margin-top:18px}
+
+.projects{grid-template-columns:1fr}
+
+.project.wide{grid-column:span 1}
+
+.portfolio-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}
+
+.portfolio-item.big{grid-row:span 1;grid-column:span 2}
+}
+
+@media(max-width:560px){
+.container{width:92%}
+
+.nav{width:94%}
+
+.hero{padding-top:130px}
+
+.hero h1{font-size:3.15rem}
+
+.hero-art{min-height:0}
+
+.hero-card{font-size:.82rem}
+
+.card-a{right:-5px}
+
+.card-b{left:-5px}
+
+section{padding:0 0 35px}
+
+.stats{grid-template-columns:1fr}
+
+.portfolio-grid{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,150px)}
+
+.portfolio-item.big{grid-column:span 1}
+
+.footer-inner{display:block}
+
+.footer-inner p:last-child{margin-top:8px}
+}
+.hero-grid{
+  grid-template-columns:1fr !important;
+  gap:0 !important;
+  justify-items:center;
+  text-align:center;
+  .hero-copy{
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.actions{
+  justify-content:center;
+}
+}
+
+.hero-art{
+  display:none !important;
+}
+.photoshoot-card{
+  background-image:
+    linear-gradient(to top,rgba(20,60,80,.55),rgba(20,60,80,.05)),
+    url("photography.jpg");
+  background-size:cover;
+  background-position:center 100%;
+  background-repeat:no-repeat;
+}
+#portfolio .section-head .kicker{
+  font-size:2rem !important;
+  font-weight:800 !important;
+  letter-spacing:.08em !important;
+}
+.section-head .kicker{
+  font-size:2rem !important;
+  font-weight:800 !important;
+  letter-spacing:.08em !important;
+} 
+/* ================================
+   DISCOVER DROPDOWN
+================================ */
+
+.nav-dropdown{
+  position:relative;
+}
+
+.nav-dropdown-btn{
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+  padding:8px 12px;
+  border-radius:12px;
+}
+
+.nav-dropdown-menu{
+  position:absolute;
+  top:calc(100% + 10px);
+  right:0;
+  min-width:210px;
+  padding:8px;
+  display:none;
+
+  background:rgba(70,120,160,.92);
+  border:1px solid rgba(255,255,255,.65);
+  border-radius:18px;
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  box-shadow:0 18px 45px rgba(40,130,175,.20);
+  z-index:100;
+}
+
+.nav-dropdown-menu a{
+  display:block;
+  padding:11px 14px;
+  border-radius:12px;
+  color:inherit:405563 !important;
+  text-decoration:none;
+}
+
+.nav-dropdown-menu a:hover{
+  background:rgba(120,190,230,.18);
+}
+
+.nav-dropdown.open .nav-dropdown-menu{
+  display:block;
+}
+/* Navigation spacing override */
+.navlinks > a{
+  margin-left:-4px;
+  margin-right:-4px;
+}
+/* Main navigation links spacing */
+.nav-main-links{
+  display:flex;
+  align-items:center;
+  gap:2px;
+}
+
+.nav-main-links a{
+  padding:10px 9px;
+}
+ /* =========================================
+   EXCLUSIVE BUSINESS PLACEMENT
+   HORIZONTAL PRODUCT CAROUSEL
+========================================= */
+
+.business-placement-content {
+  margin-top: 35px;
+}
+
+.business-placement-carousel {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.business-placement-viewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.business-placement-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  transition: transform .45s ease;
+}
+
+.business-product-card {
+  flex: 0 0 calc((min(100vw - 160px, 1160px) - 44px) / 3);
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255,255,255,.20);
+  border: 1px solid rgba(255,255,255,.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.business-product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 70px rgba(40,130,175,.25);
+}
+
+.business-product-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.18);
+  overflow: hidden;
+}
+
+.business-product-image span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  opacity: .75;
+}
+
+.business-product-info {
+  padding: 18px 20px 20px;
+}
+
+.business-product-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  -webkit-text-stroke: .4px #7c8790;
+}
+
+.business-product-info p {
+  margin-top: 7px;
+  font-size: .86rem;
+  line-height: 1.5;
+  opacity: .78;
+}
+
+.business-product-arrow {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* NEXT BUTTON — SAME HORIZONTAL ROW */
+.business-product-next {
+  flex: 0 0 auto;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 14px;
+  padding: 12px 17px;
+  background: rgba(255,255,255,.20);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: inherit;
+  cursor: pointer;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: transform .25s ease, background .25s ease;
+}
+
+.business-product-next:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.30);
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+  .business-product-card {
+    flex-basis: calc((100vw - 110px - 22px) / 2);
+  }
+}
+
+/* PHONE */
+@media (max-width: 560px) {
+  .business-placement-carousel {
+    gap: 10px;
+  }
+
+  .business-product-card {
+    flex-basis: calc(100vw - 105px);
+  }
+
+  .business-product-next {
+    padding: 10px 12px;
+    font-size: .8rem;
+  }
+}
+/* Square product cards */
+.business-product-card {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.business-product-image {
+  aspect-ratio: 1 / 1;
+  flex: 1;
+  min-height: 0;
+}
+
+.business-product-info {
+  flex: 0 0 auto;
+  padding: 14px 16px 16px;
+}
+
+.business-product-info h3 {
+  font-size: 1.05rem;
+}
+
+.business-product-info p {
+  font-size: .78rem;
+  line-height: 1.35;
+  margin-top: 5px;
+}
+
+.business-product-arrow {
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+/* Keep all three product cards fully visible */
+ .business-placement-carousel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.business-placement-viewport {
+  grid-column: 2;
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.business-placement-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  transition: transform .45s ease;
+}
+
+.business-product-navigation {
+  display: contents;
+}
+
+.business-product-prev {
+  grid-column: 1;
+  grid-row: 1;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  background: rgba(255,255,255,.20);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.business-product-next {
+  grid-column: 3;
+  grid-row: 1;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  background: rgba(255,255,255,.20);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.business-product-prev:hover,
+.business-product-next:hover {
+  background: rgba(255,255,255,.32);
+  transform: scale(1.05);
+}
+
+.business-placement-viewport {
+  overflow: hidden;
+}
+
+ .business-product-card {
+  flex: 0 0 clamp(220px, 25vw, 300px);
+  width: clamp(220px, 25vw, 300px);
+  box-sizing: border-box;
+}
+/* =========================================
+   BUSINESS PRODUCT VIEWER
+========================================= */
+
+ .business-product-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 45, 65, 0.68);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.business-product-viewer.active {
+  display: flex;
+}
+.business-product-viewer-card {
+  position: relative;
+  width: min(1100px, 92vw);
+  max-height: 88vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,.45);
+
+  background: rgba(230,248,255,.20);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  box-shadow: 0 30px 90px rgba(0,50,90,.35);
+}
+.business-product-viewer-photo {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,.12);
+  overflow: hidden;
+}
+
+.business-product-viewer-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+ .business-product-viewer-details {
+  width: 100%;
+  height: 100%;
+
+  padding: 55px 45px 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background: rgba(255,255,255,.10);
+}
+
+.business-product-viewer-details h2 {
+  margin: 10px 0 20px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.business-product-viewer-details p {
+  margin: 0 0 45px;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.business-product-viewer-shops {
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
+.business-product-viewer-shops-title {
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.business-product-viewer-shop-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+  .business-product-viewer-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.25);
+  color: #173b5c;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+  z-index: 20;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.business-product-viewer-close:hover {
+  background: rgba(255,255,255,.45);
+}
+}
+/* BUSINESS PRODUCT PHOTO NAVIGATION */
+
+.business-product-viewer-photo {
+  position: relative;
+}
+
+.business-product-viewer-prev,
+.business-product-viewer-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.08);
+  color: #173b5c;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  cursor: pointer;
+  z-index: 10;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: .25s ease;
+}
+
+.business-product-viewer-prev {
+  left: 18px;
+}
+
+.business-product-viewer-next {
+  right: 18px;
+}
+
+.business-product-viewer-prev:hover,
+.business-product-viewer-next:hover {
+  background: rgba(255,255,255,92);
+  transform: translateY(-50%) scale(1.05);
+}
+/* =================================
+   PROJECT SHOWCASE — TWO EQUAL GLASS PANELS
+================================= */
+
+.project-showcase{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  align-items:stretch;
+}
+
+.project-showcase .project,
+.project-image-card{
+  min-height:330px;
+  height:100%;
+  background:rgba(255,255,255,.22);
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:var(--radius);
+  backdrop-filter:blur(18px);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.project-showcase .project{
+  padding: 28px;
+  position:relative;
+   
+}
+
+.project-image-card{
+  position:relative;
+  display:flex;
+  align-items:stretch;
+  justify-content:stretch;
+}
+
+.project-image-card img{
+  width:100%;
+  height:100%;
+  min-height:330px;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+
+@media(max-width:850px){
+  .project-showcase{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:560px){
+  .project-showcase{
+    gap:18px;
+  }
+
+  .project-showcase .project,
+  .project-image-card{
+    min-height:300px;
+  }
+
+  .project-image-card img{
+    min-height:300px;
+  }
+}
+/* =========================================
+   VLOG GLASSMORPHISM + NAVIGATION
+   Added after existing CSS
+   ========================================= */
+
+.vlog-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.vlog-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.vlog-track {
+  display: flex;
+  gap: 18px;
+  width: 100%;
+}
+
+/* VLOG CARDS — GLASSMORPHISM */
+
+.vlog-card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
+  overflow: hidden;
+
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.12);
+
+  color: #fff;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.vlog-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.22);
+
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.16);
+}
+
+/* VIDEO AREA */
+
+.vlog-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.vlog-video img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+}
+
+/* CARD INFORMATION */
+
+.vlog-info {
+  padding: 18px 18px 20px;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.vlog-info h3 {
+  margin: 0 0 8px;
+
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.vlog-info p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+}
+
+/* =========================================
+   PREVIOUS / NEXT
+   ========================================= */
+
+.vlog-navigation {
+  position: absolute;
+
+  top: 50%;
+  left: -58px;
+  right: -58px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  pointer-events: none;
+
+  z-index: 10;
+}
+
+.vlog-prev,
+.vlog-next {
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.22);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  color: #fff;
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.12);
+
+  pointer-events: auto;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.vlog-prev:hover,
+.vlog-next:hover {
+  transform: scale(1.08);
+
+  background: rgba(255, 255, 255, 0.30);
+
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.vlog-prev:disabled,
+.vlog-next:disabled {
+  opacity: 0.35;
+  cursor: default;
+  transform: none;
+}
+
+/* =========================================
+   SELECTED VLOG VIEWER
+   ========================================= */
+
+.vlog-viewer-card {
+  border: 1px solid rgba(255, 255, 255, 0.30);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.22);
+
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.vlog-viewer-details {
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.vlog-viewer-label {
+  border: 1px solid rgba(255, 255, 255, 0.30);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 999px;
+}
+
+/* VIEWER ACTION CARDS */
+
+.vlog-viewer-actions a {
+  border: 1px solid rgba(255, 255, 255, 0.30);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 14px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.vlog-viewer-actions a:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .vlog-card {
+    flex: 0 0 calc((100% - 18px) / 2);
+  }
+
+  .vlog-navigation {
+    left: -8px;
+    right: -8px;
+  }
+
+  .vlog-prev,
+  .vlog-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .vlog-card {
+    flex: 0 0 100%;
+  }
+
+  .vlog-navigation {
+    left: -8px;
+    right: -8px;
+  }
+
+  .vlog-prev,
+  .vlog-next {
+    width: 38px;
+    height: 38px;
+    font-size: 19px;
+  }
+}
+/* =========================================
+   VLOG VIEWER — MAIN MODAL
+   ========================================= */
+
+.vlog-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 45, 65, 0.62);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.vlog-viewer.active {
+  display: flex;
+}
+
+
+/* =========================================
+   VIEWER CARD
+   ========================================= */
+
+.vlog-viewer-card {
+  position: relative;
+
+  width: min(1050px, 96%);
+  max-height: 92vh;
+
+  overflow: auto;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.30);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================
+   VIEWER VIDEO
+   ========================================= */
+
+.vlog-viewer-video {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #000;
+
+  overflow: hidden;
+}
+
+.vlog-viewer-video iframe {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.vlog-viewer-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 5;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  background: rgba(20, 60, 80, 0.55);
+
+  color: #fff;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.vlog-viewer-close:hover {
+  transform: scale(1.08);
+
+  background: rgba(20, 60, 80, 0.75);
+}
+
+
+/* =========================================
+   VIEWER DETAILS
+   ========================================= */
+
+.vlog-viewer-details {
+  padding: 25px 28px 28px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.vlog-viewer-label {
+  display: inline-block;
+
+  padding: 7px 12px;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.10em;
+
+  color: #fff;
+}
+
+.vlog-viewer-details h2 {
+  margin: 12px 0 10px;
+
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+
+  line-height: 1.15;
+
+  color: #fff;
+
+  -webkit-text-stroke: 0.5px #7c8790;
+}
+
+.vlog-viewer-details p {
+  margin: 0;
+
+  max-width: 850px;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  line-height: 1.7;
+
+  white-space: pre-line;
+}
+
+
+/* =========================================
+   VIEWER BUTTONS
+   ========================================= */
+
+.vlog-viewer-actions {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 22px;
+}
+
+.vlog-viewer-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 17px;
+
+  color: #fff;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.30);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 14px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.vlog-viewer-actions a:hover {
+  background: rgba(255, 255, 255, 0.24);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MOBILE VIEWER
+   ========================================= */
+
+@media (max-width: 560px) {
+
+  .vlog-viewer {
+    padding: 12px;
+  }
+
+  .vlog-viewer-card {
+    width: 100%;
+
+    max-height: 94vh;
+
+    border-radius: 22px;
+  }
+
+  .vlog-viewer-details {
+    padding: 20px 18px 22px;
+  }
+
+  .vlog-viewer-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .vlog-viewer-actions {
+    flex-direction: column;
+  }
+
+  .vlog-viewer-actions a {
+    width: 100%;
+  }
+
+}
+/* =========================================
+   OFFICIALGELO14 — YOUTUBE VLOG VIEWER
+   ========================================= */
+
+.vlog-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 45, 65, 0.68);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.vlog-viewer.active {
+  display: flex;
+}
+
+
+/* =========================================
+   VIEWER CARD
+   ========================================= */
+
+.vlog-viewer-card {
+  position: relative;
+
+  width: min(1050px, 96%);
+  max-height: 92vh;
+
+  overflow: auto;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  background: rgba(230,248,255,.20);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  box-shadow:
+    0 30px 90px rgba(0,50,90,.35);
+}
+
+
+/* =========================================
+   YOUTUBE VIDEO
+   ========================================= */
+
+.vlog-viewer-video {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #000;
+
+  overflow: hidden;
+}
+
+.vlog-viewer-video iframe {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.vlog-viewer-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 20;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255,255,255,.55);
+
+  border-radius: 50%;
+
+  background: rgba(30,80,110,.55);
+
+  color: #fff;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.vlog-viewer-close:hover {
+  transform: scale(1.08);
+
+  background: rgba(30,80,110,.78);
+}
+
+
+/* =========================================
+   VIEWER DETAILS
+   ========================================= */
+
+.vlog-viewer-details {
+  padding: 25px 28px 28px;
+
+  background: rgba(255,255,255,.10);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.vlog-viewer-label {
+  display: inline-block;
+
+  padding: 7px 12px;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.16);
+
+  color: #fff;
+
+  font-size: .72rem;
+  font-weight: 800;
+
+  letter-spacing: .10em;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.vlog-viewer-details h2 {
+  margin: 13px 0 10px;
+
+  color: #fff;
+
+  font-size: clamp(1.6rem,4vw,2.6rem);
+
+  line-height: 1.15;
+
+  -webkit-text-stroke: .5px #7c8790;
+}
+
+.vlog-viewer-details p {
+  margin: 0;
+
+  max-width: 850px;
+
+  color: rgba(255,255,255,.90);
+
+  line-height: 1.7;
+
+  white-space: pre-line;
+}
+
+
+/* =========================================
+   VIEWER BUTTONS
+   ========================================= */
+
+.vlog-viewer-actions {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 22px;
+}
+
+.vlog-viewer-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,.16);
+
+  color: #fff;
+
+  font-weight: 700;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.vlog-viewer-actions a:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255,255,255,.28);
+}
+
+
+/* =========================================
+   CLICKABLE VLOG CARDS
+   ========================================= */
+
+.vlog-card {
+  cursor: pointer;
+}
+
+.vlog-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================
+   THUMBNAIL BUTTON
+   ========================================= */
+
+.vlog-thumbnail-button {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.vlog-thumbnail-button:focus {
+  outline: none;
+}
+
+
+/* =========================================
+   PLAY BUTTON
+   ========================================= */
+
+.vlog-play-button {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.88);
+
+  color: #3ba4dc;
+
+  font-size: 22px;
+
+  padding-left: 3px;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.vlog-card:hover .vlog-play-button {
+  transform: translate(-50%,-50%) scale(1.08);
+
+  background: #fff;
+}
+
+
+/* =========================================
+   NEWEST BADGE
+   ========================================= */
+
+.vlog-new {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  z-index: 5;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.90);
+
+  color: #3ba4dc;
+
+  font-size: .68rem;
+
+  font-weight: 800;
+
+  letter-spacing: .08em;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,.12);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 560px) {
+
+  .vlog-viewer {
+    padding: 10px;
+  }
+
+  .vlog-viewer-card {
+    width: 100%;
+
+    max-height: 94vh;
+
+    border-radius: 22px;
+  }
+
+  .vlog-viewer-details {
+    padding: 20px 18px 22px;
+  }
+
+  .vlog-viewer-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .vlog-viewer-actions {
+    flex-direction: column;
+  }
+
+  .vlog-viewer-actions a {
+    width: 100%;
+  }
+
+  .vlog-play-button {
+    width: 48px;
+    height: 48px;
+
+    font-size: 19px;
+  }
+
+}
+/* =========================================
+   OFFICIALGELO14 — FINAL YOUTUBE VLOG VIEWER
+   DESKTOP: VIDEO LEFT / DETAILS RIGHT
+   ========================================= */
+
+.vlog-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(15, 45, 65, 0.68);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.vlog-viewer.active {
+  display: flex;
+}
+
+
+/* =========================================
+   MAIN VIEWER CARD
+   ========================================= */
+
+.vlog-viewer-card {
+  position: relative;
+
+  width: min(1100px, 94vw);
+  max-height: 88vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(255,255,255,.38);
+
+  background: rgba(220,245,255,.20);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  box-shadow:
+    0 35px 100px rgba(0,40,80,.38);
+}
+
+
+/* =========================================
+   LEFT — YOUTUBE VIDEO
+   ========================================= */
+
+.vlog-viewer-video {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 360px;
+
+  background: #000;
+
+  overflow: hidden;
+}
+
+.vlog-viewer-video iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+
+/* =========================================
+   RIGHT — DETAILS
+   ========================================= */
+
+.vlog-viewer-details {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  padding: 42px 38px;
+
+  background: rgba(255,255,255,.11);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =========================================
+   VLOG NUMBER
+   ========================================= */
+
+.vlog-viewer-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 7px 13px;
+
+  border: 1px solid rgba(255,255,255,.40);
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.17);
+
+  color: #fff;
+
+  font-size: .72rem;
+
+  font-weight: 800;
+
+  letter-spacing: .10em;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.vlog-viewer-details h2 {
+  margin: 18px 0 12px;
+
+  color: #fff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+
+  line-height: 1.15;
+
+  -webkit-text-stroke: .5px #7c8790;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.vlog-viewer-details p {
+  margin: 0;
+
+  max-width: 500px;
+
+  color: rgba(255,255,255,.91);
+
+  font-size: .95rem;
+
+  line-height: 1.7;
+
+  white-space: pre-line;
+}
+
+
+/* =========================================
+   BUTTON AREA
+   ========================================= */
+
+.vlog-viewer-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+
+  margin-top: 28px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   VIEW CHANNEL / WATCH YOUTUBE
+   ========================================= */
+
+.vlog-viewer-actions a {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 13px 17px;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,.16);
+
+  color: #fff;
+
+  font-size: .88rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.vlog-viewer-actions a:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255,255,255,.28);
+
+  box-shadow:
+    0 8px 24px rgba(0,50,90,.18);
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.vlog-viewer-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 50;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255,255,255,.55);
+
+  border-radius: 50%;
+
+  background: rgba(20,70,100,.55);
+
+  color: #fff;
+
+  font-size: 27px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.vlog-viewer-close:hover {
+  transform: scale(1.08);
+
+  background: rgba(20,70,100,.78);
+}
+
+
+/* =========================================
+   CLICKABLE VLOG CARDS
+   ========================================= */
+
+.vlog-card {
+  cursor: pointer;
+}
+
+.vlog-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================
+   THUMBNAIL BUTTON
+   ========================================= */
+
+.vlog-thumbnail-button {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.vlog-thumbnail-button:focus {
+  outline: none;
+}
+
+
+/* =========================================
+   PLAY BUTTON
+   ========================================= */
+
+.vlog-play-button {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%);
+
+  padding-left: 3px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.90);
+
+  color: #3ba4dc;
+
+  font-size: 22px;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.vlog-card:hover .vlog-play-button {
+  transform: translate(-50%, -50%) scale(1.08);
+
+  background: #fff;
+}
+
+
+/* =========================================
+   NEWEST BADGE
+   ========================================= */
+
+.vlog-new {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  z-index: 5;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.92);
+
+  color: #3ba4dc;
+
+  font-size: .68rem;
+
+  font-weight: 800;
+
+  letter-spacing: .08em;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,.12);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .vlog-viewer {
+    padding: 12px;
+  }
+
+  .vlog-viewer-card {
+    width: 100%;
+    max-height: 94vh;
+
+    grid-template-columns: 1fr;
+
+    overflow-y: auto;
+
+    border-radius: 22px;
+  }
+
+  .vlog-viewer-video {
+    height: auto;
+    min-height: 0;
+
+    aspect-ratio: 16 / 9;
+  }
+
+  .vlog-viewer-details {
+    padding: 22px 20px 24px;
+  }
+
+  .vlog-viewer-details h2 {
+    font-size: 1.55rem;
+  }
+
+  .vlog-viewer-actions {
+    margin-top: 22px;
+  }
+
+  .vlog-viewer-actions a {
+    width: 100%;
+  }
+
+}
+
+.business-ventures-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.business-ventures-label {
+  font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+
+.featured-business-name {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0;
+}
+  /* CONTACT HEADING — FINAL */
+
+#contact .section-head {
+  display: block;
+  width: 100%;
+  margin-bottom: 42px;
+}
+
+#contact .section-head .contact-main-title {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  white-space: nowrap;
+  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+  line-height: 1.1;
+}
+
+#contact .section-head > p {
+  display: block;
+  width: max-content;
+  max-width: none;
+  margin: 12px 0 0;
+  white-space: nowrap;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  #contact .section-head .contact-main-title {
+    white-space: normal;
+    font-size: 2rem;
+  }
+
+  #contact .section-head > p {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    font-size: 1.05rem;
+    text-align: center;
+}
+  }
+}
+#contact > .container > p {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    margin: 12px auto 0;
+}
+.vision p + p {
+    margin-top: 20px !important;
+}
+.vision p {
+    text-align: justify;
+}
+.contact-links a img {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#contact .contact {
+    grid-template-columns: 1fr !important;
+}
+.project-image-card img {
+    object-fit: contain !important;
+    object-position: center !important;
+}
+@media (max-width: 700px) {
+  .business-product-viewer-card {
+    width: 94vw;
+    max-height: 92vh;
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+
+  .business-product-viewer-photo {
+    min-height: 300px;
+  }
+
+  .business-product-viewer-details {
+    padding: 25px;
+  }
+}
+/* BUSINESS PRODUCT VIEWER - CLOSE BUTTON */
+.business-product-viewer-card {
+  position: relative !important;
+}
+
+.business-product-viewer-close {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+
+  width: 44px !important;
+  height: 44px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: 1px solid rgba(255,255,255,.7) !important;
+  border-radius: 50% !important;
+
+  background: rgba(255,255,255,.75) !important;
+  color: #173b5c !important;
+
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+
+  cursor: pointer !important;
+  z-index: 99999 !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* ================================
+   NEWSLETTER — GLASS MORPHISM
+================================ */
+
+#newsletter {
+  padding: 0 0 35px;
+}
+
+ .newsletter-card {
+  padding: 24 42px;
+  background: rgba(255,255,255,.22);
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: var(--radius);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.newsletter-content {
+  text-align: center;
+}
+
+.newsletter-card .kicker {
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+.newsletter-card h2 {
+  margin-top: 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  -webkit-text-stroke: 1px #7c8790;
+}
+
+.newsletter-card p {
+  margin: 14px auto 0;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.newsletter-form input {
+  width: min(420px, 100%);
+  padding: 14px 17px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.55);
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255,255,255,.85);
+}
+
+.newsletter-form input:focus {
+  border-color: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.28);
+}
+
+.newsletter-form .btn {
+  border: 1px solid rgba(255,255,255,.65);
+  cursor: pointer;
+}
+
+.newsletter-note {
+  font-size: .78rem;
+  opacity: .75;
+}
+
+.newsletter-message {
+  min-height: 20px;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .newsletter-card {
+    padding: 30px 22px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   GELOMIND — FLOATING AI CHAT
+   Responsive: Desktop / Tablet / Mobile
+   ========================================================= */
+
+.gelomind-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  font-family: inherit;
+}
+
+/* ---------------------------------------------------------
+   CLOSED GELOMIND BUTTON
+   --------------------------------------------------------- */
+
+.gelomind-launcher {
+  width: 76px;
+  height: 76px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    #2f8cff,
+    #1769d5
+  );
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  box-shadow:
+    0 8px 25px rgba(23, 105, 213, 0.28),
+    0 0 0 4px rgba(255, 255, 255, 0.45);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.gelomind-launcher span {
+  max-width: 52px;
+}
+
+.gelomind-launcher:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 30px rgba(23, 105, 213, 0.35),
+    0 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+
+/* ---------------------------------------------------------
+   CHAT WINDOW
+   --------------------------------------------------------- */
+
+.gelomind-chat {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  width: 475px;
+  height: 760px;
+  max-height: calc(100vh - 48px);
+
+  display: none;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(210, 225, 245, 0.9);
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 70px rgba(40, 90, 150, 0.22),
+    0 5px 20px rgba(40, 90, 150, 0.10);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.gelomind-chat.is-open {
+  display: flex;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.gelomind-header {
+  min-height: 72px;
+  padding: 14px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.82);
+  border-bottom: 1px solid rgba(215, 225, 240, 0.85);
+}
+
+.gelomind-header strong {
+  display: block;
+  color: #10264a;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.gelomind-header span {
+  display: block;
+  margin-top: 4px;
+  color: #4caf6b;
+  font-size: 12px;
+}
+
+.gelomind-close {
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #17335d;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------
+   MESSAGE AREA
+   --------------------------------------------------------- */
+
+.gelomind-messages {
+  flex: 1;
+  min-height: 0;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(247, 251, 255, 0.9),
+      rgba(238, 247, 255, 0.78)
+    );
+}
+
+.gelomind-message {
+  width: fit-content;
+  max-width: 78%;
+
+  margin-bottom: 14px;
+  padding: 12px 15px;
+
+  border-radius: 16px;
+
+  color: #172a46;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* AI = LEFT */
+
+.gelomind-message.ai {
+  margin-right: auto;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(215, 225, 240, 0.9);
+
+  border-bottom-left-radius: 5px;
+
+  box-shadow: 0 4px 14px rgba(70, 110, 150, 0.08);
+}
+
+/* USER = RIGHT */
+
+.gelomind-message.user {
+  margin-left: auto;
+
+  background: #dcecff;
+  border: 1px solid #c9e1fb;
+
+  border-bottom-right-radius: 5px;
+}
+
+
+/* ---------------------------------------------------------
+   SUGGESTED QUESTIONS
+   --------------------------------------------------------- */
+
+.gelomind-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.gelomind-suggestions button {
+  width: 100%;
+
+  padding: 10px 13px;
+
+  border: 1px solid #d7e5f5;
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.88);
+  color: #1d518d;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gelomind-suggestions button:hover {
+  background: #edf6ff;
+  transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   INPUT AREA
+   --------------------------------------------------------- */
+
+.gelomind-input-area {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 13px 15px;
+
+  background: rgba(255, 255, 255, 0.94);
+  border-top: 1px solid rgba(215, 225, 240, 0.85);
+}
+
+.gelomind-input-area input {
+  flex: 1;
+  min-width: 0;
+
+  height: 48px;
+
+  padding: 0 15px;
+
+  border: 1px solid #d7e3f1;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #172a46;
+
+  font: inherit;
+  outline: none;
+}
+
+.gelomind-input-area input:focus {
+  border-color: #6aa9ee;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.10);
+}
+
+.gelomind-input-area button {
+  flex: 0 0 48px;
+
+  width: 48px;
+  height: 48px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #2479df;
+  color: #fff;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.gelomind-input-area button:hover {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .gelomind-widget {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .gelomind-chat {
+    right: 18px;
+    bottom: 18px;
+
+    width: 390px;
+    height: 650px;
+    max-height: calc(100vh - 36px);
+
+    border-radius: 22px;
+  }
+
+  .gelomind-launcher {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .gelomind-widget {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .gelomind-launcher {
+    width: 64px;
+    height: 64px;
+
+    font-size: 12px;
+  }
+
+  .gelomind-chat {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    max-height: none;
+
+    border: 0;
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .gelomind-header {
+    min-height: 68px;
+    padding: 12px 16px;
+  }
+
+  .gelomind-messages {
+    padding: 16px;
+  }
+
+  .gelomind-message {
+    max-width: 84%;
+    font-size: 15px;
+  }
+
+  .gelomind-input-area {
+    padding:
+      10px 12px
+      calc(10px + env(safe-area-inset-bottom));
+  }
+}
+/* =========================================================
+   GELOMIND — DARK MODE
+   ========================================================= */
+
+.gelomind-chat {
+  background: #101827;
+  border-color: #26354d;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.45),
+    0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* HEADER */
+
+.gelomind-header {
+  background: #111c2d;
+  border-bottom-color: #26354d;
+}
+
+.gelomind-header strong {
+  color: #f3f7ff;
+}
+
+.gelomind-header span {
+  color: #55d982;
+}
+
+.gelomind-close {
+  color: #e8f0ff;
+}
+
+/* MESSAGE AREA */
+
+.gelomind-messages {
+  background:
+    linear-gradient(
+      180deg,
+      #101827,
+      #0d1624
+    );
+}
+
+/* AI MESSAGE — LEFT */
+
+.gelomind-message.ai {
+  background: #182337;
+  border-color: #2a3b55;
+  color: #edf4ff;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* USER MESSAGE — RIGHT */
+
+.gelomind-message.user {
+  background: #174f91;
+  border-color: #2467b5;
+  color: #ffffff;
+}
+
+/* SUGGESTED QUESTIONS */
+
+.gelomind-suggestions button {
+  background: #162337;
+  border-color: #2b405e;
+  color: #8fc4ff;
+}
+
+.gelomind-suggestions button:hover {
+  background: #1d304b;
+}
+
+/* INPUT AREA */
+
+.gelomind-input-area {
+  background: #111c2d;
+  border-top-color: #26354d;
+}
+
+.gelomind-input-area input {
+  background: #182337;
+  border-color: #30445f;
+  color: #f1f6ff;
+}
+
+.gelomind-input-area input::placeholder {
+  color: #8392a8;
+}
+
+.gelomind-input-area input:focus {
+  border-color: #4d9cff;
+  box-shadow:
+    0 0 0 3px rgba(77, 156, 255, 0.12);
+}
+
+.gelomind-input-area button {
+  background: #2479df;
+  color: #ffffff;
+}
+/* =========================================================
+   GELOMIND — TRUE BLACK / MESSENGER-STYLE DARK MODE
+   ========================================================= */
+
+.gelomind-chat {
+  background: #000000;
+  border-color: #202020;
+  color: #f5f5f5;
+}
+
+/* HEADER */
+
+.gelomind-header {
+  background: #000000;
+  border-bottom-color: #242424;
+}
+
+.gelomind-header strong {
+  color: #ffffff;
+}
+
+.gelomind-header span {
+  color: #45d477;
+}
+
+.gelomind-close {
+  color: #ffffff;
+}
+
+/* MESSAGE AREA */
+
+.gelomind-messages {
+  background: #000000;
+}
+
+/* AI MESSAGE — LEFT */
+
+.gelomind-message.ai {
+  background: #242424;
+  border-color: #303030;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* USER MESSAGE — RIGHT */
+
+.gelomind-message.user {
+  background: #1877f2;
+  border-color: #1877f2;
+  color: #ffffff;
+}
+
+/* SUGGESTED QUESTIONS */
+
+.gelomind-suggestions button {
+  background: #181818;
+  border-color: #303030;
+  color: #58a6ff;
+}
+
+.gelomind-suggestions button:hover {
+  background: #242424;
+}
+
+/* INPUT AREA */
+
+.gelomind-input-area {
+  background: #000000;
+  border-top-color: #242424;
+}
+
+.gelomind-input-area input {
+  background: #242424;
+  border-color: #383838;
+  color: #ffffff;
+}
+
+.gelomind-input-area input::placeholder {
+  color: #a0a0a0;
+}
+
+.gelomind-input-area input:focus {
+  border-color: #1877f2;
+  box-shadow: none;
+}
+
+.gelomind-input-area button {
+  background: #1877f2;
+  color: #ffffff;
+}
