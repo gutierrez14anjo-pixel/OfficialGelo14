@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Featured Businesses — Philippine Businesses. Global Exposure.">
+  <title>Featured Businesses | OfficialGelo14</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="page-overlay" aria-hidden="true"></div>
+
+  <header class="nav" id="top">
+    <a class="brand" href="../index.html#projects">Business Ventures</a>
+
+    <nav class="nav-main-links" aria-label="Main navigation">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#portfolio">Portfolio</a>
+      <a href="../index.html#vlogs">Vlogs</a>
+    </nav>
+
+    <button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#portfolio">Portfolio</a>
+      <a href="../index.html#vlogs">Vlogs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="featured-section" aria-labelledby="featuredTitle">
+      <div class="container">
+        <h1 id="featuredTitle" class="page-title">Philippine Businesses. Global Exposure.</h1>
+
+        <div class="business-grid" id="businessGrid">
+          <!-- Exactly five cards: one per approved category. -->
+        </div>
+
+        <p class="showcase-statement">
+          A Global Showcase for Products &amp; 
+          Small Businesses<span style="white-space: nowrap;">in the Philippines.</span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <div class="social-links" aria-label="OfficialGelo14 social links">
+          <a class="social-link youtube" href="https://www.youtube.com/OfficialGelo14" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.12C19.55 3.5 12 3.5 12 3.5s-7.55 0-9.4.58A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.12c1.85.58 9.4.58 9.4.58s7.55 0 9.4-.58a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.55 15.95v-7.9L16.1 12l-6.55 3.95Z"/></svg>
+          </a>
+          <a class="social-link tiktok" href="https://www.tiktok.com/@officialgelo14" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.7 2h3.1c.3 1.8 1.3 3.2 3.2 3.9v3.2c-1.7-.1-3.1-.6-4.4-1.5v7.1c0 4.1-2.7 6.9-6.8 6.9-3.7 0-6.3-2.6-6.3-6 0-3.7 2.9-6.3 6.8-6.3.4 0 .8 0 1.2.1v3.4c-.4-.1-.8-.2-1.2-.2-1.7 0-3 1.1-3 2.8 0 1.5 1.1 2.7 2.6 2.7 1.7 0 2.9-1.2 2.9-3.3V2Z"/></svg>
+          </a>
+          <a class="social-link gmail" href="mailto:officialgelo.business@gmail.com" aria-label="Gmail">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 5.2h17.6A1.2 1.2 0 0 1 22 6.4v11.2a1.2 1.2 0 0 1-1.2 1.2H3.2A1.2 1.2 0 0 1 2 17.6V6.4a1.2 1.2 0 0 1 1.2-1.2Zm.8 2.2v9.4h2.2V9.9l5.8 4.1 5.8-4.1v6.9H20V7.4l-8 5.6-8-5.6Z"/></svg>
+          </a>
+        </div>
+
+        <button class="gelomind" id="gelomindButton" type="button" aria-label="Open GeloMind AI Chat" aria-controls="gelomindChat" aria-expanded="false">
+          <span>GeloMind</span>
+          <small>AI Chat</small>
+        </button>
+      </div>
+
+      <p class="copyright">© 2026 Business Ventures. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+  <div class="gelomind-chat" id="gelomindChat" aria-hidden="true">
+    <div class="gelomind-chat-card" role="dialog" aria-modal="true" aria-labelledby="gelomindChatTitle">
+      <div class="gelomind-chat-header">
+        <div>
+          <strong id="gelomindChatTitle">GeloMind</strong>
+          <small>OfficialGelo14 AI Chat</small>
+        </div>
+        <button class="gelomind-chat-close" id="gelomindChatClose" type="button" aria-label="Close GeloMind AI Chat">×</button>
+      </div>
+
+      <div class="gelomind-chat-messages" id="gelomindChatMessages" aria-live="polite">
+        <div class="gelomind-message assistant">
+          Hi! I'm GeloMind. How can I help you with the Featured Businesses page?
+        </div>
+      </div>
+
+      <form class="gelomind-chat-form" id="gelomindChatForm">
+        <input id="gelomindChatInput" type="text" placeholder="Ask GeloMind..." autocomplete="off" aria-label="Message GeloMind">
+        <button type="submit" aria-label="Send message">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="viewer" id="businessViewer" aria-hidden="true">
+    <div class="viewer-card" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+      <button class="viewer-close" id="viewerClose" type="button" aria-label="Close Product Viewer">×</button>
+
+      <div class="viewer-photo">
+        <img id="viewerImage" src="" alt="">
+        <button class="viewer-arrow viewer-prev" id="viewerPrev" type="button" aria-label="Previous photo">‹</button>
+        <button class="viewer-arrow viewer-next" id="viewerNext" type="button" aria-label="Next photo">›</button>
+      </div>
+
+      <div class="viewer-info">
+        <h2 id="viewerTitle"></h2>
+        <p id="viewerDescription"></p>
+
+        <p class="example-notice">This photo is for example purposes only.</p>
+
+        <div class="viewer-divider"></div>
+
+        <h3>Buy this product on:</h3>
+        <div class="shop-links" id="shopLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
