@@ -191,24 +191,23 @@
 
 <div class="photoshoot-grid" id="photoshootGrid">  
 
-  <!-- NEWEST PHOTOSHOOT -->  
-  <article class="photoshoot-card reveal"  
-    onclick="openPhotoshoot(0)">  
+ <!-- NEWEST PHOTOSHOOT -->
+<article class="photoshoot-card reveal"
+  onclick="openPhotoshoot(0)">
 
-    <div class="photoshoot-image"  
-      style="background-image:url('photography.jpg')">  
-      <span class="photoshoot-new">NEWEST</span>  
-    </div>  
+  <div class="photoshoot-image"
+ style="background-image:url('https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/16.jpg')">
+  <span class="photoshoot-new">NEWEST</span>
+  </div>
 
-    <div class="photoshoot-info">  
-      <div>  
-        <h3>School Photoshoot</h3>  
-        <p>Photoshoot at school...</p>  
-      </div>  
-      <span class="photoshoot-arrow">→</span>  
-    </div>  
+  <div class="photoshoot-info">
+    <div>
+      <h3>BCI Sports Fest | 09.02.2026 | Bauan Colleges Inc.</h3>
+    </div>
+    <span class="photoshoot-arrow">→</span>
+  </div>
 
-  </article>  
+</article> 
 
 
   <!-- SECOND PHOTOSHOOT -->  
@@ -259,7 +258,7 @@
 
   <div class="photoshoot-modal-header">  
     <div class="kicker" id="albumKicker">  
-      PHOTOSHOOT  
+       
     </div>  
 
     <h2 id="albumTitle">  
@@ -283,7 +282,64 @@
 </div>
 
   </div>  
-</section> <style>  
+</section>
+<!-- PHOTOSHOOT PHOTO VIEWER -->
+<div class="photoshoot-photo-viewer" id="photoshootPhotoViewer">
+  <div class="photoshoot-photo-viewer-card">
+
+    <button class="photoshoot-photo-viewer-close"
+            id="photoshootPhotoViewerClose"
+            aria-label="Close photo viewer">
+      ×
+    </button>
+
+    <div class="photoshoot-photo-viewer-main">
+
+      <img id="photoshootViewerImage"
+           src=""
+           alt="Opening of Intramurals photo">
+
+      <button class="photoshoot-viewer-prev"
+              id="photoshootViewerPrev"
+              aria-label="Previous photo">
+        ‹
+      </button>
+
+      <button class="photoshoot-viewer-next"
+              id="photoshootViewerNext"
+              aria-label="Next photo">
+        ›
+      </button>
+
+    </div>
+
+    <div class="photoshoot-photo-viewer-thumbnails">
+
+      <div class="photoshoot-viewer-heading">
+        <h3 id="photoshootViewerTitle">
+         BCI Sports Fest | 09.02.2026 | Bauan Colleges Inc.
+        </h3>
+
+        <p id="photoshootViewerSubtitle">
+        
+        </p>
+
+        <span id="photoshootViewerCounter">
+          
+        </span>
+      </div>
+
+      <div class="photoshoot-viewer-thumbnail-list"
+           id="photoshootViewerThumbnailList">
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+ <style>  
+
 /* ================================  
    PHOTOSHOOTS GALLERY  
 ================================ */  
@@ -519,6 +575,69 @@
 ================================ */  
   
 const photoshootAlbums = [  
+    {
+    title: "BCI Sports Fest | 09.02.2026 | Bauan Colleges Inc.",
+
+    short:
+      "Opening of Intramurals — OfficialGelo14 Photography",
+
+    description:
+      " Capturing the energy, pride and memorable moments of the Intramurals Opening on September 2, 2026.",
+
+    photos: [
+      "https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/DSC09309.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/DSC09332.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/DSC09354.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/DSC09379.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/DSC09391.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_211858_1.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_212130.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_222640.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_222734.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_222849.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_223106.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_223243.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_223350.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_223445.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_223536.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_223634.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_224158.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_224613.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_224803.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_225431.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/1.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/2.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/3.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/4.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/5.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/6.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/7.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/8.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/9.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/10.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/11.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/12.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/13.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/14.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/15.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/16.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/17.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/18.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/DSC09141.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/DSC09183%20(2).jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_225457.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_225533.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_225655.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_225812.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260903_225838.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260904_232022.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260904_232442.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260904_232542.jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260904_232602%20(1).jpg",
+"https://raw.githubusercontent.com/gutierrez14anjo-pixel/OfficialGelo14-Photos/main/opening-of-intramurals/IMG_20260904_232602.jpg"
+    ]
+  },
+
   
   {  
     title: "School Photoshoot",  
@@ -653,6 +772,376 @@ document.addEventListener("keydown",function(event){
   }  
   
 });  
+/* =========================================================
+   PHOTOSHOOT PHOTO VIEWER
+   ========================================================= */
+
+const photoshootPhotoViewer =
+  document.getElementById("photoshootPhotoViewer");
+
+const photoshootViewerImage =
+  document.getElementById("photoshootViewerImage");
+
+const photoshootViewerTitle =
+  document.getElementById("photoshootViewerTitle");
+
+const photoshootViewerSubtitle =
+  document.getElementById("photoshootViewerSubtitle");
+
+const photoshootViewerCounter =
+  document.getElementById("photoshootViewerCounter");
+
+const photoshootViewerThumbnailList =
+  document.getElementById("photoshootViewerThumbnailList");
+
+const photoshootPhotoViewerClose =
+  document.getElementById("photoshootPhotoViewerClose");
+
+const photoshootViewerPrev =
+  document.getElementById("photoshootViewerPrev");
+
+const photoshootViewerNext =
+  document.getElementById("photoshootViewerNext");
+
+let photoshootViewerAlbum = null;
+let photoshootViewerIndex = 0;
+
+
+/* OPEN PHOTO VIEWER */
+
+function openPhotoshootPhotoViewer(albumIndex, photoIndex) {
+
+  photoshootViewerAlbum = photoshootAlbums[albumIndex];
+
+  if (!photoshootViewerAlbum) return;
+
+  photoshootViewerIndex = photoIndex;
+
+  photoshootViewerTitle.textContent =
+    photoshootViewerAlbum.title;
+
+  photoshootViewerSubtitle.textContent =
+    "A collection of " +
+    photoshootViewerAlbum.photos.length +
+    " photos";
+
+  photoshootViewerThumbnailList.innerHTML = "";
+
+  photoshootViewerAlbum.photos.forEach((photo, index) => {
+
+    const thumbnail = document.createElement("button");
+
+    thumbnail.className = "photoshoot-viewer-thumbnail";
+
+    thumbnail.type = "button";
+
+    thumbnail.setAttribute(
+      "aria-label",
+      "Open photo " + (index + 1)
+    );
+
+    const thumbnailImage =
+      document.createElement("img");
+
+    thumbnailImage.src = photo;
+
+    thumbnailImage.alt =
+      photoshootViewerAlbum.title +
+      " photo " +
+      (index + 1);
+
+    thumbnail.appendChild(thumbnailImage);
+
+    thumbnail.addEventListener("click", function(event) {
+
+      event.stopPropagation();
+
+      showPhotoshootViewerPhoto(index);
+
+    });
+
+    photoshootViewerThumbnailList.appendChild(thumbnail);
+
+  });
+
+  showPhotoshootViewerPhoto(photoshootViewerIndex);
+
+  photoshootPhotoViewer.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+/* SHOW SELECTED PHOTO */
+
+function showPhotoshootViewerPhoto(index) {
+
+  if (!photoshootViewerAlbum) return;
+
+  const total =
+    photoshootViewerAlbum.photos.length;
+
+  if (index < 0) {
+    index = total - 1;
+  }
+
+  if (index >= total) {
+    index = 0;
+  }
+
+  photoshootViewerIndex = index;
+
+  photoshootViewerImage.src =
+    photoshootViewerAlbum.photos[index];
+
+  photoshootViewerImage.alt =
+    photoshootViewerAlbum.title +
+    " photo " +
+    (index + 1);
+
+  photoshootViewerCounter.textContent =
+    "Photo " +
+    (index + 1) +
+    " of " +
+    total;
+
+  const thumbnails =
+    photoshootViewerThumbnailList.querySelectorAll(
+      ".photoshoot-viewer-thumbnail"
+    );
+
+  thumbnails.forEach((thumbnail, thumbnailIndex) => {
+
+    thumbnail.classList.toggle(
+      "active",
+      thumbnailIndex === index
+    );
+
+  });
+
+  const activeThumbnail =
+    thumbnails[index];
+
+  if (activeThumbnail) {
+
+    activeThumbnail.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "nearest"
+    });
+
+  }
+}
+
+
+/* PREVIOUS PHOTO */
+
+photoshootViewerPrev.addEventListener(
+  "click",
+  function(event) {
+
+    event.stopPropagation();
+
+    showPhotoshootViewerPhoto(
+      photoshootViewerIndex - 1
+    );
+
+  }
+);
+
+
+/* NEXT PHOTO */
+
+photoshootViewerNext.addEventListener(
+  "click",
+  function(event) {
+
+    event.stopPropagation();
+
+    showPhotoshootViewerPhoto(
+      photoshootViewerIndex + 1
+    );
+
+  }
+);
+
+
+/* CLOSE VIEWER */
+
+function closePhotoshootPhotoViewer() {
+
+  photoshootPhotoViewer.classList.remove("active");
+
+  photoshootViewerImage.src = "";
+
+  photoshootViewerAlbum = null;
+
+  document.body.style.overflow = "";
+
+}
+
+
+/* CLOSE BUTTON */
+
+photoshootPhotoViewerClose.addEventListener(
+  "click",
+  function(event) {
+
+    event.stopPropagation();
+
+    closePhotoshootPhotoViewer();
+
+  }
+);
+
+
+/* CLICK OUTSIDE CARD = CLOSE */
+
+photoshootPhotoViewer.addEventListener(
+  "click",
+  function(event) {
+
+    if (
+      event.target === photoshootPhotoViewer
+    ) {
+
+      closePhotoshootPhotoViewer();
+
+    }
+
+  }
+);
+
+
+/* CLICK PHOTO INSIDE ALBUM */
+
+document
+  .getElementById("albumGallery")
+  .addEventListener(
+    "click",
+    function(event) {
+
+      const clickedPhoto =
+        event.target.closest("img");
+
+      if (!clickedPhoto) return;
+
+      const albumTitle =
+        document.getElementById(
+          "albumTitle"
+        ).textContent;
+
+      const albumIndex =
+        photoshootAlbums.findIndex(
+          album =>
+            album.title === albumTitle
+        );
+
+      if (albumIndex === -1) return;
+
+      const photoIndex =
+        Array.from(
+          this.querySelectorAll("img")
+        ).indexOf(clickedPhoto);
+
+      if (photoIndex === -1) return;
+
+      openPhotoshootPhotoViewer(
+        albumIndex,
+        photoIndex
+      );
+
+    }
+  );
+
+
+/* KEYBOARD CONTROLS */
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      !photoshootPhotoViewer.classList.contains(
+        "active"
+      )
+    ) {
+      return;
+    }
+
+    if (event.key === "ArrowLeft") {
+
+      showPhotoshootViewerPhoto(
+        photoshootViewerIndex - 1
+      );
+
+    }
+
+    if (event.key === "ArrowRight") {
+
+      showPhotoshootViewerPhoto(
+        photoshootViewerIndex + 1
+      );
+
+    }
+
+    if (event.key === "Escape") {
+
+      closePhotoshootPhotoViewer();
+
+    }
+
+  }
+);
+
+
+/* MOBILE SWIPE */
+
+let photoshootViewerTouchStartX = 0;
+
+photoshootViewerImage.addEventListener(
+  "touchstart",
+  function(event) {
+
+    photoshootViewerTouchStartX =
+      event.touches[0].clientX;
+
+  },
+  { passive: true }
+);
+
+photoshootViewerImage.addEventListener(
+  "touchend",
+  function(event) {
+
+    const touchEndX =
+      event.changedTouches[0].clientX;
+
+    const difference =
+      touchEndX -
+      photoshootViewerTouchStartX;
+
+    if (Math.abs(difference) < 50) {
+      return;
+    }
+
+    if (difference > 0) {
+
+      showPhotoshootViewerPhoto(
+        photoshootViewerIndex - 1
+      );
+
+    } else {
+
+      showPhotoshootViewerPhoto(
+        photoshootViewerIndex + 1
+      );
+
+    }
+
+  },
+  { passive: true }
+);
 </script>
 <!-- ================================
      YOUTUBE VLOGS
